@@ -19,14 +19,14 @@ https://github.com/prometheus/node exporter/tree/master/text collector examples
 
 ## Set up
 To enable text collector set the following flag for `node_exporter`:
-- `--collector.textfile.directory`
+- `--collector.textfile.directory=/var/lib/node_exporter/textfile_collector`
 
 To get an up to date version of smartmontools it could be necessary to compile it:
 https://www.smartmontools.org/wiki/Download#Installfromthesourcetarball
 
 - check by executing `smartctl --version`
 
-- make smartmon.sh executable
+- make smartmon.sh executable (`chmod +x smartmon.sh`)
 
 - save it under `/usr/local/bin/smartmon.sh`
 
@@ -40,6 +40,22 @@ Example for *UBUNTU* `crontab -e`:
 Example for *FreeBSD* `crontab -e`:
 
 `*/5 * * * * /usr/local/bin/smartmon.sh > /var/tmp/node_exporter/smart_metrics.prom`
+
+### Number formatting
+
+`smartmon.sh` uses system utilities that by default format numbers according to the localization settings configured for the system.
+
+On systems using locales that format decimal numbers with the comma instead of the dot (e.g. `1,4` instead of `1.4`), node-exporter may fail to parse values, producing a log line such as:
+
+```
+ts=2022-11-25T11:55:00.384Z caller=textfile.go:227 level=error collector=textfile msg="failed to collect textfile data" file=smart_metrics.prom err="failed to parse textfile data from \"/var/lib/node_exporter/textfile_collector/smart_metrics.prom\": text format parsing error in line 21: expected float as value, got \"0,000000\""
+```
+
+This can be fixed in various ways; the easiest one consists of executing the script with the environment variable `LC_NUMERIC=C`:
+
+```shell
+LC_NUMERIC=C /usr/local/bin/smartmon.sh
+```
 
 
 ## How to add specific S.M.A.R.T. attributes
