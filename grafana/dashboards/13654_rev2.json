@@ -70,7 +70,7 @@
   "panels": [
     {
       "collapsed": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -91,7 +91,7 @@
         "rgba(237, 129, 40, 0.89)",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "custom": {}
@@ -171,7 +171,7 @@
       "valueName": "current"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -395,7 +395,7 @@
         "#E02F44",
         "#d44a3a"
       ],
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": null,
       "fieldConfig": {
         "defaults": {
@@ -478,7 +478,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -495,7 +495,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "decimals": 1,
       "description": "",
       "fieldConfig": {
@@ -620,7 +620,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -700,7 +700,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -714,7 +714,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -796,7 +796,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -875,7 +875,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -951,7 +951,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1028,7 +1028,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1103,7 +1103,7 @@
     },
     {
       "cacheTimeout": null,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1176,7 +1176,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1189,7 +1189,7 @@
       "type": "row"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1271,7 +1271,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "Aggregated graph for all types of errors",
       "fieldConfig": {
         "defaults": {
@@ -1450,7 +1450,7 @@
       }
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1526,7 +1526,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -1603,7 +1603,7 @@
     },
     {
       "collapsed": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "gridPos": {
         "h": 1,
         "w": 24,
@@ -1616,7 +1616,7 @@
       "type": "row"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "Grown defects are drive blocks that have been marked bad once the drive has been in use",
       "fieldConfig": {
         "defaults": {
@@ -1691,7 +1691,7 @@
       "cacheTimeout": null,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "Aggregated graph for all types of SAS errors",
       "fieldConfig": {
         "defaults": {
@@ -1838,7 +1838,7 @@
       }
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "SCSI command errors which might be related to bad cable, backplane or card",
       "fieldConfig": {
         "defaults": {
@@ -1908,7 +1908,7 @@
       "type": "bargauge"
     },
     {
-      "datasource": "${DS_PROMETHEUS}",
+      "datasource": "Prometheus",
       "description": "Specifies the counter that contains the total number of blocks for which an uncorrected data error has occurred",
       "fieldConfig": {
         "defaults": {
@@ -1992,7 +1992,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_PROMETHEUS}",
+        "datasource": "Prometheus",
         "definition": "label_values(smartmon_smartctl_version, instance) ",
         "error": null,
         "hide": 0,
@@ -2015,7 +2015,7 @@
       {
         "allValue": null,
         "current": {},
-        "datasource": "${DS_PROMETHEUS}",
+        "datasource": "Prometheus",
         "definition": "label_values(smartmon_device_info, disk)",
         "error": null,
         "hide": 0,
